@@ -19,11 +19,41 @@
   <h3>Question 1</h3>
 <p>Why is effective communication important in the workplace?</p>
   <ul>
-  <li>To share ideas and collaborate effectively.</li>
-  <li>To avoid interacting with colleagues.</li>
-  <li>To make workplace tasks more complicated.</li>
-  <li>To reduce teamwork.</li>
+  <div>
+  <button onclick="checkAnswer(True)">
+    To share ideas and collaborate effectively.
+  </button>
+
+  <button onclick="checkAnswer(true)">
+    To avoid interacting with colleagues.
+  </button>
+
+  <button onclick="checkAnswer(false)">
+    To make workplace tasks more complicated.
+  </button>
+
+  <button onclick="checkAnswer(false)">
+    To reduce teamwork.
+  </button>
+</div>
+
+<p id="feedback"></p>
 </ul>
+  <script>
+  function checkAnswer(isCorrect) {
+    <script>
+  function checkAnswer(isCorrect) {
+    const feedback = document.getElementById("feedback");
+
+    if (isCorrect) {
+      feedback.textContent = "Correct! Great job!";
+      feedback.style.color = "green";
+    } else {
+      feedback.textContent = "Not quite! Try again.";
+      feedback.style.color = "red";
+    }
+  }
+</script>
   <body>
   
 

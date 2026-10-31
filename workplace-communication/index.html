@@ -78,6 +78,18 @@
 
   <h2>Let's Get Started!</h2>
   <p>Good communication begins with listening, clarity, and respect.</p>
+<script>
+  function checkAnswer(isCorrect) {
+    const feedback = document.getElementById("feedback");
 
+    if (isCorrect) {
+      feedback.textContent = "Correct! Great job!";
+      feedback.style.color = "green";
+    } else {
+      feedback.textContent = "Not quite! Try again.";
+      feedback.style.color = "red";
+    }
+  }
+</script>
 </body>
 </html>

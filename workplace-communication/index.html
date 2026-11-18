@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Workplace Communication | Learning Module</title>
 
   <style>
@@ -12,65 +13,146 @@
       background-color: #f4f7fb;
       color: #333333;
       margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background-color: #ffffff;
       padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      color: #234e70;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #234e70;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .quiz {
+      background-color: #f4f7fb;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background-color: #ffffff;
+      color: #234e70;
+      border: 1px solid #b7c9d8;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 7px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #e3edf5;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      .container {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1 style="color: #234e70; font-size: 36px;">
-    Workplace Communication
-  </h1>
+  <div class="container">
 
-  <h2>Welcome to Your Learning Module!</h2>
+    <h1>Workplace Communication</h1>
 
-  <p>
-    Effective communication is an essential skill in every workplace.
-    It helps us share ideas, collaborate with colleagues, and build
-    positive professional relationships.
-  </p>
+    <h2>Welcome to Your Learning Module!</h2>
 
-  <h2>What You Will Learn</h2>
+    <p>
+      Effective communication is an essential skill in every workplace.
+      It helps us share ideas, collaborate with colleagues, and build
+      positive professional relationships.
+    </p>
 
-  <ul>
-    <li>Understand the importance of workplace communication.</li>
-    <li>Learn how to communicate professionally.</li>
-    <li>Practice active listening.</li>
-    <li>Write clear and effective workplace emails.</li>
-  </ul>
+    <h2>What You Will Learn</h2>
 
-  <h2>Let's Get Started!</h2>
+    <ul>
+      <li>Understand the importance of workplace communication.</li>
+      <li>Learn how to communicate professionally.</li>
+      <li>Practice active listening.</li>
+      <li>Write clear and effective workplace emails.</li>
+    </ul>
 
-  <p>Good communication begins with listening, clarity, and respect.</p>
+    <h2>Let's Get Started!</h2>
 
-  <h2>Quick Knowledge Check</h2>
+    <p>
+      Good communication begins with listening, clarity, and respect.
+      These skills help create a positive and productive workplace.
+    </p>
 
-  <p>Let's see how much you have learned so far!</p>
+    <h2>Quick Knowledge Check</h2>
 
-  <h3>Question 1</h3>
+    <p>Let's see how much you have learned so far!</p>
 
-  <p>Why is effective communication important in the workplace?</p>
+    <div class="quiz">
 
-  <div>
-    <button onclick="checkAnswer(true)">
-      To share ideas and collaborate effectively.
-    </button>
+      <h3>Question 1</h3>
 
-    <button onclick="checkAnswer(false)">
-      To avoid interacting with colleagues.
-    </button>
+      <p>Why is effective communication important in the workplace?</p>
 
-    <button onclick="checkAnswer(false)">
-      To make workplace tasks more complicated.
-    </button>
+      <button onclick="checkAnswer(true)">
+        To share ideas and collaborate effectively.
+      </button>
 
-    <button onclick="checkAnswer(false)">
-      To reduce teamwork.
-    </button>
+      <button onclick="checkAnswer(false)">
+        To avoid interacting with colleagues.
+      </button>
+
+      <button onclick="checkAnswer(false)">
+        To make workplace tasks more complicated.
+      </button>
+
+      <button onclick="checkAnswer(false)">
+        To reduce teamwork.
+      </button>
+
+      <p id="feedback" aria-live="polite"></p>
+
+    </div>
+
   </div>
-
-  <p id="feedback"></p>
 
   <script>
     function checkAnswer(isCorrect) {
@@ -88,4 +170,5 @@
 
 </body>
 </html>
+
 

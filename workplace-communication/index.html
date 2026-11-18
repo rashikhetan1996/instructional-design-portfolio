@@ -151,9 +151,31 @@
       <p id="feedback" aria-live="polite"></p>
 
     </div>
+    
+    <h2>Workplace Challenge: What Would You Do?</h2>
 
-  </div>
+    <p>
+      Your manager emails you to inform you that an important
+      project deadline has been moved forward. You are unsure
+      about the new deadline and how it affects your tasks.
+    </p>
 
+    <p><strong>What should you do?</strong></p>
+
+    <button onclick="checkScenario(1)">
+      A. Ignore the email and continue with your existing schedule.
+    </button>
+
+    <button onclick="checkScenario(2)">
+      B. Reply professionally, ask for clarification, and confirm priorities.
+    </button>
+
+    <button onclick="checkScenario(3)">
+      C. Complain to your colleagues without contacting your manager.
+    </button>
+
+    <p id="scenarioFeedback" aria-live="polite"></p>
+</div>
   <script>
     function checkAnswer(isCorrect) {
       const feedback = document.getElementById("feedback");
@@ -163,6 +185,17 @@
         feedback.style.color = "green";
       } else {
         feedback.textContent = "Not quite! Try again.";
+        feedback.style.color = "red";
+      }
+    }
+        function checkScenario(answer) {
+      const feedback = document.getElementById("scenarioFeedback");
+
+      if (answer === 2) {
+        feedback.textContent = "Excellent choice! Asking for clarification and confirming priorities demonstrates professional communication.";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Not quite! A professional response means communicating directly with your manager and clarifying expectations.";
         feedback.style.color = "red";
       }
     }
